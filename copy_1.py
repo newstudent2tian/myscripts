@@ -8,19 +8,21 @@ import re
 fasta_file = sys.argv[1]
 #列出序列中所有可能的domain
 domain1= ['IP.LC', 'VP.LC']
-domain2= ['CELQ.L','CTLQ.L','CKLQ.L']
-domain3= 'C..C...C'
-domain4= 'C..CGQC...C'
-domain5= 'GEEFG'
-domain6= 'ALRRLGF'
-domain7= ['TIMEE','TVMEEG','TILEEG','TIWEEG','TVIEE','TIVEE','TIIEEG']
-domain8= ['P..TSCCP.W','P..TSCSP.W','P..TTCCP.W','P..ASACP.W','P..TSACP.W']
-domain9= 'F...GGV.E'
-domain10= 'AA.RT'
-domain11= ['E.MGC..GC..G.G','E.MAC..GC..G.G','E.MTC..GC..G.G','E.MCC..GC..G.G','E.MSC..GC..G.G']
+domain2= ['C..CGQC...CP']
+domain3= ['CELQ','CEFQ','CTLQ','CELL','CKLQ']
+#domain4= ['CRRC...C','CGRC...C','CGQC...C','CGVC...C','CNRC...C','CERC...C','CTRC...C','CDRC...C']
+#domain3= ['TIMEE..E...R','TIVEE..E...R','TIIEE..E...R','TVIEE..E...R','TIWEE..E...R','TVMEE..E...R','TILEE..E...K']
+#domain6= ['S..KSP..M','S..RSP..M','S..KSP..I','S..KSPQQ','A..KSPQQ']
+#domain4= ['TIMEE','TVMEEG','TILEEG','TIWEEG','TVIEE','TIVEE','TIIEEG']
+domain4= ['KC..C..C...C']
+domain5= ['P..TSCCP.W','P..TTCCP.W','P..ASACP.W','P..TSACP.W']
+domain6= ['P..TSCSP.W']
+#domain6= ['FG..GGV','FC..GGV']
+#domain10= 'AA.RT'
+domain7= ['E.MGC..GC..G.G','E.MAC..GC..G.G','E.MTC..GC..G.G','E.MCC..GC..G.G','E.MSC..GC..G.G']
 
 #构建二维数组
-domain=[domain1, domain2, domain3, domain4, domain5, domain6, domain7, domain8, domain9, domain10, domain11]
+domain=[domain1,  domain2,  domain3,  domain4, domain5, domain6, domain7]
 
 #打开fasta文件
 file_object = open(fasta_file)

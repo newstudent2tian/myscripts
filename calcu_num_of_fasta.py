@@ -18,8 +18,9 @@ fastas = all_the_fasta.split('\n>')
 for fasta in fastas:
 	cells = fasta.split(']\n')
 	num = len(cells[1])
+        print num
 #	print num# cells[1]
-	if 400 < num < 750:
-		print '>' + fasta
-	else:
-		continue
+#	if 150 < num:
+#		print '>' + fasta
+#	else:
+#		continue
