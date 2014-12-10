@@ -15,10 +15,14 @@ result = []
 for fasta in fastas:
 # print fasta
     cells = re.findall('\[(.*?)\]',fasta )
+ #   cells = fasta.split(']')
+ #   namess = cells[0].split('[')
+#    names = namess[-1]
 #    print cells
-    result.append(cells)
+    if len(cells) > 2:
+        result.append(cells)
 #print result
-c = set (cells)
+c = set (result)
 #print c
 for j in c:
     same_name_file = []
@@ -28,8 +32,12 @@ for j in c:
     ret=''
     maxnum=0
     for single in same_name_file:
-        if (len(single) > maxnum):
-            maxnum = len(single)
+        seqs = single.split(']')
+ #       print seqs
+        seq = seqs[-1]
+#        print seq
+        if (len(seq) > maxnum):
+            maxnum = len(seq)
             ret = single
         else:
             continue
