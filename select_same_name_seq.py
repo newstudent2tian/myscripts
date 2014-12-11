@@ -14,13 +14,13 @@ fastas = all_the_fasta.split('>')
 result = []
 for fasta in fastas:
 # print fasta
-    cells = re.findall('\[(.*?)\]',fasta )
- #   cells = fasta.split(']')
- #   namess = cells[0].split('[')
-#    names = namess[-1]
+  #  cells = re.findall('\[(.*?)\]',fasta )
+    cells = fasta.split(']\n')
+    namess = cells[0].split('[')
+    names = namess[-1]
 #    print cells
-    if len(cells) > 2:
-        result.append(cells)
+   # if len(cells) > 2:
+    result.append(names)
 #print result
 c = set (result)
 #print c
